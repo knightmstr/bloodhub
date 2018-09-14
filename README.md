@@ -8,10 +8,11 @@ The repository contains all the codes for the whole system.
 
 ## About BloodHub
 
-
+TBD
 
 ## About the task
 
+TBD
 
 ## Features
 
@@ -23,15 +24,16 @@ The repository contains all the codes for the whole system.
 
 ## Screenshots
 
+To be updated later.
 
 ## Credits
 
 ### Design of android and web app
 
-
+-
+-
 
 ### Android app development
 
-
-### Web app development
-
+- 
+-
