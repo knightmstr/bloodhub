@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BloodApp</string>
+    <string-array name="bloodGroupList">
+        <item>select</item>
+        <item>A</item>
+        <item>B</item>
+        <item>O</item>
+        <item>AB</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+</resources>
