@@ -12,13 +12,14 @@
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Register"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -35,12 +36,14 @@
 
     <EditText
         android:id="@+id/fullName"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="Enter your username"
         android:inputType="textPersonName"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -79,15 +82,16 @@
 
     <EditText
         android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Enter your address here"
         android:inputType="textPersonName"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/bloodGroup" />
 
@@ -104,12 +108,12 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="47dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="Last date of donation"
+        android:text="Last date of donation (Optional)"
         app:layout_constraintEnd_toStartOf="@+id/dateOfDonation"
         app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,22 +122,24 @@
 
     <EditText
         android:id="@+id/dateOfBirth"
-        android:layout_width="214dp"
+        android:layout_width="218dp"
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Enter your date of birth"
         android:inputType="date"
-        android:onClick="true"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
     <Spinner
         android:id="@+id/bloodGroup"
-        android:layout_width="174dp"
-        android:layout_height="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toEndOf="@+id/textView9"
@@ -141,26 +147,30 @@
 
     <EditText
         android:id="@+id/mobileNo"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Enter your mobile number"
         android:inputType="phone"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/address" />
 
     <EditText
         android:id="@+id/dateOfDonation"
-        android:layout_width="142dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Enter the last date of donation"
         android:inputType="date"
-        android:onClick="True"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
 
@@ -169,15 +179,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="8dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="Register"
-        android:onClick="register"
+        android:layout_marginTop="8dp"
+        android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toEndOf="@+id/registerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Create Password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateOfDonation"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="218dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfDonation" />
 
 </android.support.constraint.ConstraintLayout>
