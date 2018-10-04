@@ -6,34 +6,12 @@ Our awesome team has four members; Dipak Bhattarai, Saugat Pathak, Prabhat Kumar
 
 The repository contains all the codes for the whole system.
 
-## About BloodHub
-
-TBD
-
-## About the task
-
-TBD
-
-## Features
-
-- 
-- 
-- 
-- 
-- 
-
 ## Screenshots
 
 To be updated later.
 
-## Credits
+### Developed by
 
-### Design of android and web app
+"NEP DEV"
 
--
--
-
-### Android app development
-
-- 
--
+All copyrights and licence are owned by developer.
