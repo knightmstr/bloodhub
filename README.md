@@ -15,7 +15,7 @@ Developed: October, 2018
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/knightmstr/bloodhub/blob/master/Screenshot_HonePage.png" width="350"/>
+  <img src="https://github.com/knightmstr/bloodhub/blob/master/Screenshot_HomePage.png" width="350"/>
  </p>
 <p align="center">
   <img src="https://github.com/knightmstr/bloodhub/blob/master/Screenshot_EmergencyPost.png" width="350"/>
