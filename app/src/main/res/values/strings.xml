@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Blood Hub</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="sex">Sex</string>
+    <string name="read_us">
+        BloodHub\n\n\nDeveloper : NEP DEV\n
+        Version : 1.00\n
+        Year : 2018\n\n
+        Terms of use : All the user provided information will be stored on this application and displayed to only other users of BloodHub. Personal details will not be misused or shared with other sources.
+        \n\nAll copyrights and licence of this application are owned by the developer.
+    </string>
+    <string-array name="blood_groups">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="sexes">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>

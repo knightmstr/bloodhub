@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudip Poudel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address : Chitwan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"
+        android:textColor="#AAAAAA"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone : 9849184465"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"
+        android:textColor="#AAAAAA"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_ldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Donated On : 2015/12/3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="1dp"
+        android:textColor="#AAAAAA"/>
+
+</LinearLayout>
