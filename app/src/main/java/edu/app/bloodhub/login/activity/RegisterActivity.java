@@ -320,6 +320,14 @@ public class RegisterActivity extends BaseActivity {
                 Toast.makeText(this, "Password Cannot be empty", Toast.LENGTH_SHORT).show();
                 return false;
             }
+            if (username.length() <= 5) {
+                Toast.makeText(this, "Username should at least be of 6 characters", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+            if (pass.length() <= 5) {
+                Toast.makeText(this, "Password should at least be of 6 characters", Toast.LENGTH_SHORT).show();
+                return false;
+            }
         }
         if (dob.equalsIgnoreCase("Date of Birth")) {
             Toast.makeText(this, "Date of Birth Cannot be empty", Toast.LENGTH_SHORT).show();

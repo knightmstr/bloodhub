@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
@@ -21,8 +22,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.app.bloodhub.BaseActivity;
-import edu.app.bloodhub.dashboard.activity.MainActivity;
 import edu.app.bloodhub.R;
+import edu.app.bloodhub.dashboard.activity.MainActivity;
 import edu.app.bloodhub.dashboard.donorlist.activity.DonorListActivity;
 import edu.app.bloodhub.login.readus.activity.ReadUsActivity;
 import edu.app.bloodhub.model.User;
@@ -88,6 +89,10 @@ public class LoginActivity extends BaseActivity {
                 if(username.isEmpty()||password.isEmpty()){
                     Toast.makeText(this, "Username or Password cannot be empty", Toast.LENGTH_SHORT).show();
                 }else{
+                    if(forTestingUer()){
+                        Toast.makeText(LoginActivity.this, getResources().getString(R.string.TOAST_STRING), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     if(!isAdmin()) {
                         dialog.show();
                         DatabaseReference userNameRef = reference.child("userslist").child(username);
@@ -97,7 +102,7 @@ public class LoginActivity extends BaseActivity {
                                 if (!dataSnapshot.exists()) {
                                     //create new user
                                     dialog.dismiss();
-                                    Toast.makeText(LoginActivity.this, "Invalid Username", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, getResources().getString(R.string.TOAST_STRING), Toast.LENGTH_SHORT).show();
 
                                 } else {
                                     User user = dataSnapshot.getValue(User.class);
@@ -106,10 +111,13 @@ public class LoginActivity extends BaseActivity {
                                         preference.setUser(user);
                                         preference.setLoggedIn(true);
                                         preference.setAdmin(false);
-                                        MainActivity.startMainActivity(LoginActivity.this);
+                                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+
+                                        openMainActivity();
+
                                     } else {
                                         dialog.dismiss();
-                                        Toast.makeText(LoginActivity.this, "Invalid Username or Password.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             }
@@ -123,11 +131,33 @@ public class LoginActivity extends BaseActivity {
                         dialog.dismiss();
                         preference.setLoggedIn(true);
                         preference.setAdmin(true);
-                        MainActivity.startMainActivity(LoginActivity.this);
+                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        openMainActivity();
                     }
                 }
                 break;
         }
+    }
+
+    private void openMainActivity() {
+        new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                // This method will be executed once the timer is over
+                // Start your app main activity
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(i);
+
+                // close this activity
+                finish();
+            }
+        }, 30);
     }
 
     private boolean isAdmin() {
@@ -135,6 +165,13 @@ public class LoginActivity extends BaseActivity {
             return true;
         }
         return false;
+    }
+
+    private boolean forTestingUer() {
+        if (username.equals("admin") && password.equals("admin1")) {
+            return false;
+        }
+        return true;
     }
 
     public static void startLoginActivity(Context context){

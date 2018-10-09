@@ -9,6 +9,7 @@
         Terms of use : All the user provided information will be stored on this application and displayed to only other users of BloodHub. Personal details will not be misused or shared with other sources.
         \n\nAll copyrights and licence of this application are owned by the developer.
     </string>
+    <string name="TOAST_STRING">Invalid username or password</string>
     <string-array name="blood_groups">
         <item>A+</item>
         <item>A-</item>
